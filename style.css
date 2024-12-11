@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;  /* Light background */
+    color: #333;  /* Dark text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #2c2c2c;  /* Dark background */
+    color: #f1f1f1;  /* Light text color */
+}
+
+.navbar {
+    background-color: #f8f9fa;  /* Light navbar background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s; /* Smooth transition for dark mode */
+}
+
+.dark-mode .navbar {
+    background-color: #444;  /* Dark navbar background */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.vuexy-link {
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: inherit; /* Inherit color for light/dark mode */
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: inherit; /* Inherit color for light/dark mode */
+    font-size: 16px;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.navbar-search button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-now-btn {
+    background-color: #6a1b9a; /* Purple color */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.buy-now-btn:hover {
+    background-color: #5a1481; /* Darker purple on hover */
+}
+
+.theme-toggle-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.theme-toggle-btn:hover {
+    color: #6a1b9a; /* Change color on hover */
+}
+
+.header-section {
+    background-color: #e7e5e2;  /* Wheat color */
+    padding: 50px 30px;  /* Increase the padding vertically */
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;  /* Let the content dictate the height */
+}
+
+/* Dark mode styling for header section */
+.dark-mode .header-section {
+    background-color: #444;  /* Dark background for dark mode */
+}
+
+.header-section h1 {
+    font-size: 32px; /* Adjust font size if needed */
+    margin-bottom: 10px;
+    color: #333;  /* Default to dark text color for light mode */
+    padding-top: 20px;  /* Add more vertical space above */
+    padding-bottom: 20px;
+}
+
+/* Dark mode styling for main title */
+.dark-mode .header-section h1 {
+    color: white; /* Change font color to white in dark mode */
+}
+
+.header-section h2 {
+    font-size: 16px; /* Maintain the size for the subtitle */
+    color: #555;  /* Default to slightly lighter text color for light mode */
+}
+
+/* Dark mode styling for subtitle */
+.dark-mode .header-section h2 {
+    color: white; /* Change font color to white in dark mode */
+}
+
+
+.header-section p {
+    font-size: 16px;
+    color: #555;  /* Slightly lighter text color */
+}
+
+.get-started-btn {
+    background-color: #5641e1; /* Purple color */
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 25px; /* Add space above the button */
+    display: inline-block; /* Ensure it respects margins */
+}
+
+.get-started-btn:hover {
+    background-color: #5a1481; /* Darker purple on hover */
+}
+
+.main-title {
+    font-size: 32px; /* Adjust font size if needed */
+    margin-bottom: 10px;
+    color: #333;  /* Dark text color */
+    padding-top: 20px;  /* Add more vertical space above */
+    padding-bottom: 20px;  /* Add more vertical space below */
+}
+
+.sub-title {
+    font-size: 16px; /* Maintain the size for the subtitle */
+    color: #555;  /* Slightly lighter text color */
+}
+
+/* Other existing styles... */
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between; /* Add space between the images */
+    align-items: flex-start;
+    padding: 20px; /* Add some padding */
+    margin: 20px 40px; /* Optional: add margins to the section */
+}
+
+.image-gallery img {
+    width: 350px; /* Set width for each image */
+    height: 223.41px; /* Keep aspect ratio */
+    border: 2px solid #ccc; /* Add a light border */
+    border-radius: 10px; /* Optional: add rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Ensure dark mode styling remains consistent for the new section */
+.dark-mode .image-gallery img {
+    border-color: #666; /* Darker border in dark mode */
+}
+
+/* Style the container that holds the image and the text */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the image and text */
+    width: 350px; /* Ensure the container has the same width as the image */
+    margin-bottom: 20px;
+   
+}
+
+.image-description {
+    margin-top: 30px; /* Add space between image and description */
+    text-align: center;
+}
+
+.description-title {
+    font-size: 18px; /* Adjust the font size for the first line */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Apply normal font weight to the second line and add margin */
+.image-description span {
+    display: block; /* Make each span a block element */
+}
+
+.image-description span + span {
+    font-weight: normal; /* Normal font weight for the second line */
+    font-size: 16px; /* Maintain or adjust the size of the normal text */
+    margin-top: 5px; /* Add space between the first and second lines */
+}
